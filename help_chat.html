@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--Allows us to use the social media icons.-->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="assets\css\style.css" rel="stylesheet">
+	<link href="assets\css\help_chat_style.css" rel="stylesheet">
+
+
+	<style>
+
+		pre { color: #fff; white-space: pre-wrap; word-wrap: break-word; text-shadow: 0 0 10px #ccc; }
+		#input { border-bottom: 1px solid #ccc; background-color: #383838; padding: 0.25em; outline: 0; }
+		#input::before { content: "> Enter message here..."; }
+	  </style>
+	  <script>
+		function log(message) {
+		  document.getElementById("log").textContent += message + "\n";
+		}
+	  </script>
+	  <script src="https://chr15m.github.io/bugout/bugout.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+
+<!-- Navigation using Bootstrap classes-->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+  <!--1. Makes responsive to cell phones; light background; element stay sticky/fixed
+	at the top of the page when you scroll past it-->
+<div class= "container-fluid"> <!--Takes up 100 % of the screen-->
+<a class="navbar-brand" href="#"><img src="images\logo.png" id="logoImage"><h1 id="companyTitle">All About Covid</h1></a> <!--Represent a logo or a header-->
+</button>
+
+<!--The navbar items-->
+<div class = "collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="news.html">News</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="safety.html">safety</a>
+  </li>
+
+  <li class="nav-item active">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+</div>
+</nav>
+
+
+<!--chat safety title and logo---->
+<div id="heading_area"> <!--Takes up 100 % of the screen-->
+<h1 id="h_title">PROFESSIONAL CHAT</h1><!--Represent a logo or a header-->
+</button>
+</div>
+
+<!--chat service~Create center div-->
+ <div id="chat_container">
+	<pre id="log" style="padding-right: 10%;"></pre>
+	<pre id="input" contenteditable="true"></pre>
+   </div>
+
+
+				<!-- Footer -->
+				<footer  class="page-footer footerDim">
+					<div>
+						<p class="center">Copyright &copy; Your Website 2020</p>
+					</div>
+					<!-- /.container -->
+				</footer>
+
+</body>
+<script>
+    var me = "";
+    var other = "";
+
+	log("Welcome! This platform provides you with a safe space where you can discuss with a health care professional anything that is on your mind regarding how you are dealing with COVID-19. When someone who can help you is online, you will be alerted. Happy chatting and we hope you stay safe!\n")
+
+var b = Bugout("bugout-chat-tutorial");
+b.on("seen", function(address) {
+    log("You are now connected with: " + address + " and can begin chatting.");
+    other = address;
+    });
+
+    b.on("message", function(address, message) {
+        if (address == b.address()){
+            address = "Me"
+        }
+  log(address + ": " + message);
+});
+
+document.getElementById("input").onkeydown = function(ev) {
+    if (ev.keyCode == 13) {
+      if (b.lastwirecount) {
+        b.send(ev.target.textContent);
+        ev.target.textContent = "";
+      }
+      ev.preventDefault();
+    }
+  }
+</script>
+</html>

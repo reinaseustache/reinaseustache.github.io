@@ -1,0 +1,19 @@
+body {
+  background-color: #222;
+  color: #ccc;
+}
+/* remove defaults from responsive cols */
+
+.nopadding {
+  padding: 2px !important;
+  margin: 0 !important;
+  outline: 2px solid #333;
+  background: #333;
+}
+
+
+/**Featured Video**/
+#featured_safety_video{Width:50%; height:50%; Padding:5%; margin-left:25%; margin-top: 3%;}
+#other_safety_videos{margin-top:2%; Padding:2%;}
+
+button{border:none;}

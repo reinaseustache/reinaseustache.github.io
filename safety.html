@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--Allows us to use the social media icons.-->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="assets\js\safety_script.js"></script>
+  <link href="assets\css\style.css" rel="stylesheet">
+	<link href="assets\css\safety_style.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Navigation using Bootstrap classes-->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+<div class= "container-fluid"> <!--Takes up 100 % of the screen-->
+<a class="navbar-brand" href="#"><img src="images\logo.png" id="logoImage"><h1 id="companyTitle">All About Covid</h1></a> <!--Represent a logo or a header-->
+</button>
+
+<!--The navbar items-->
+<div class = "collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="news.html">News</a>
+  </li>
+
+  <li class="nav-item active">
+    <a class="nav-link" href="safety.html">safety</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+	<li>
+	<!-- <Button onClick="loadPetSrc()">Test</Button> -->
+</li>
+</div>
+</nav>
+
+
+<!--Covid safety title and logo---->
+<div id="heading_area"> <!--Takes up 100 % of the screen-->
+<h1 id="h_title">COVID safety</h1><!--Represent a logo or a header-->
+</button>
+</div>
+
+<!--The navbar items-->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+<div>
+<ul class="navbar-nav mr-auto">
+<li class="nav-item" id ="adult_nav">
+	<Button  onclick="loadAdultsSrc()">Adults</Button>
+  <!-- <a class="nav-link" href=""  onclick="loadAdultsSrc()">Adults</a> -->
+</li>
+<li class="nav-item" id ="children_nav">
+	<Button  onclick="loadChildrenSrc()">Children</Button>
+  <!-- <a class="nav-link" href=""  onclick="loadChildrenSrc()">Children</a> -->
+</li>
+
+<li class="nav-item" id ="pets_nav">
+	<Button  onclick="loadPetSrc()">Pets</Button>
+  <!-- <a class="nav-link" href="" onclick="loadPetSrc()">Pets</a> -->
+</li>
+<!-- <li class="nav-item" id ="games_nav">
+  <a class="nav-link" href="" onclick="">Games</a>
+</li> -->
+</div>
+</nav>
+
+
+<!--Featured Video-->
+<!-- 21:9 aspect ratio --> <!--MAYBE TITLE AND WHO BY for each-figure out design for each one....-->
+<div class="embed-responsive embed-responsive-1by1" id = "featured_safety_video">
+  <iframe class="embed-responsive-item" id = "selected_video" src="https://www.youtube.com/embed/hxHoQAedqbQ"></iframe>
+</div>
+
+<!--Other Videos list--->
+<div id = "other_safety_videos">
+<div class="row">
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315" id = "vid_0" src="https://www.youtube.com/embed/hxHoQAedqbQ" allowfullscreen></iframe>
+]       </div>
+     </div>
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315" id = "vid_1" src="https://www.youtube.com/embed/kYIObVAeVTo"  allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_2" src="https://www.youtube.com/embed/0CGWhgBhUBE" allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_3"  src="https://www.youtube.com/embed/nhif-kPDBME" allowfullscreen></iframe>
+       </div>
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"   id = "vid_4" src="https://www.youtube.com/embed/nhif-kPDBME" allowfullscreen></iframe>
+       </div>
+     </div>
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_5" src="https://www.youtube.com/embed/S78s_DAh0Xc" allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_6" src="https://www.youtube.com/embed/PRibJKhcVuQ"  allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="420" height="315"  id = "vid_7" src="https://www.youtube.com/embed/FPWzUO-P7GI"  allowfullscreen></iframe>
+       </div>
+     </div>
+   </div>
+
+
+
+   <div class="row">
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_8" src="https://www.youtube.com/embed/qPoptbtBjkg" allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_9" src="https://www.youtube.com/embed/IM4SvY_1d4k"  allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_10" src="https://www.youtube.com/embed/fdbwTNNsF1E" allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_11" src="https://www.youtube.com/embed/gQYH7tIhLYM" allowfullscreen></iframe>
+       </div>
+     </div>
+</div>
+
+   <div class="row">
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_12" src="https://www.youtube.com/embed/Rd1QTxxVCDU" allowfullscreen></iframe>
+       </div>
+     </div>
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_13" src="https://www.youtube.com/embed/3PmVJQUCm4E" allowfullscreen></iframe>
+       </div>
+     </div>
+
+     <div class="col-sm-3 nopadding">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe width="560" height="315"  id = "vid_14" src="https://www.youtube.com/embed/Dpe8aoMtfXU" allowfullscreen></iframe>
+       </div>
+     </div>
+		 <div class="col-sm-3 nopadding">
+			 <div class="embed-responsive embed-responsive-16by9">
+				 <iframe width="420" height="315"  id = "vid_15" src="https://www.youtube.com/embed/wHieprExQ7A" allowfullscreen></iframe>
+			 </div>
+		 </div>
+ </div>
+ </div
+
+
+ <!-- Footer -->
+	<footer  class="page-footer footerDim">
+		<div>
+			<p class="center">Copyright &copy; Your Website 2020</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+</body>
